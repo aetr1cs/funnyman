@@ -12,4 +12,14 @@
 --██╔══██║██╔══╝░░░░░██║░░░██╔══██╗██║██║░░██╗░╚═══██╗  ░██╔╝░░  ██║░░░██║██╔══██║██║░██╔██╗░
 --██║░░██║███████╗░░░██║░░░██║░░██║██║╚█████╔╝██████╔╝  ██╔╝░░░  ╚██████╔╝██║░░██║██║██╔╝╚██╗
 --╚═╝░░╚═╝╚══════╝░░░╚═╝░░░╚═╝░░╚═╝╚═╝░╚════╝░╚═════╝░  ╚═╝░░░░  ░╚═════╝░╚═╝░░╚═╝╚═╝╚═╝░░╚═╝
+local descendants = game:GetService("Players").LocalPlayer.Character:GetDescendants()
 
+while true do task.wait()
+for _,v in pairs(game:GetService("Players").LocalPlayer.Character:GetDescendants()) do
+for i = 1, #descendants do
+if v.Name == "Slash" then
+v:FireServer()
+end
+end
+end
+end
